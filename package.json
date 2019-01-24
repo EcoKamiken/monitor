@@ -1,0 +1,23 @@
+{
+  "name": "monitoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "latest",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  },
+  "scripts": {
+    "devel": "php -S localhost:8001 -t public & gulp watch & gulp server"
+  },
+  "author": "",
+  "license": "ISC"
+}

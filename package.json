@@ -3,20 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bulma": "^0.7.2"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "browser-sync": "^2.26.3",
     "gulp": "latest",
+    "gulp-babel": "^8.0.0",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
     "gulp-connect-php": "^1.0.3",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "gulp-util": "latest"
+    "gulp-util": "latest",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
-    "devel": "php -S localhost:8001 -t public & gulp watch & gulp server"
+    "devel": "webpack -w & gulp watch & gulp server"
   },
   "author": "",
   "license": "ISC"

@@ -1,47 +1,37 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    connect = require('gulp-connect-php'),
-    browserSync = require('browser-sync');
-
-gulp.task('copy', function() {
-    return gulp.src('public/index.php')
-    .pipe(gulp.dest('assets'))
-});
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const babel = require('gulp-babel');
 
 gulp.task('sass', function() {
-    return gulp.src('styles/main.scss')
+    return gulp.src('resources/sass/main.scss')
     .pipe(sass({style: 'expanded'}))
         .on('error', gutil.log)
-    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('public/css'))
 });
 
-gulp.task('js', function() {
-    return gulp.src('scripts/*.js')
-    .pipe(uglify())
-    .pipe(concat('script.js'))
-    .pipe(gulp.dest('assets'))
-});
+gulp.task('babel', function() {
+    return gulp.src('./resources/js/index.js')
+    .pipe(babel())
+    .pipe(gulp.dest('./dist'))
+})
 
 gulp.task('watch', function() {
-    gulp.watch('scripts/*.js', gulp.series('js'));
-    gulp.watch('styles/main.scss', gulp.series('sass'));
+    gulp.watch('resources/sass/main.scss', gulp.series('sass'));
+    gulp.watch('resources/js/index.js', gulp.series('babel'));
 });
 
 gulp.task('server', function() {
-    connect.server({
-        port: 8001,
-        base: 'public'
-    }, function() {
-        browserSync({
-            files: [
-                "public/templates/*",
-                "public/*",
-                "assets/*"
-            ],
-            proxy: 'localhost:8001'
-        });
+    browserSync({
+        server: {
+            baseDir: "public",
+            index: "index.html"
+        },
+        files: [
+            "public/*",
+            "public/js/*",
+            "public/css/*",
+        ]
     });
 });

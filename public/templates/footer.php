@@ -3,6 +3,9 @@
       <p>
         <strong>Kamiken Portal</strong> by <a>Kazuki Nakajima</a>.
       </p>
+      <p>
+          &copy; KAMISATO KENSETSU, Inc. 2019
+      </p>
     </div>
   </footer>
 

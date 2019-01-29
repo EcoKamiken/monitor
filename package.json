@@ -31,7 +31,7 @@
     "webpack-stream": "^5.2.1"
   },
   "scripts": {
-    "devel": "webpack -w & gulp watch & gulp server"
+    "devel": "php -S localhost:10000 -t public & webpack -w & gulp watch & gulp server"
   },
   "author": "",
   "license": "ISC"

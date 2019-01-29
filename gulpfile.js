@@ -24,9 +24,8 @@ gulp.task('watch', function() {
 
 gulp.task('server', function() {
     browserSync({
-        server: {
-            baseDir: "public",
-            index: "index.html"
+        proxy: {
+            target: "localhost:10000"
         },
         files: [
             "public/*",

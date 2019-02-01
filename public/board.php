@@ -17,40 +17,11 @@
         </form>
       </section>
 
-      <div class="field">
-        <label class="label"></label>
-        <div class="control">
-          <input id="topicFilterInput" class="input" type="text" onkeyup="topicFilter()" placeholder="Search....">
-        </div>
-      </div>
+      <section class="section">
+        <h2>List</h2>
+        <p>.</p>
+      </section>
 
-      <table id="topicTable" class="table is-striped">
-        <thead>
-          <tr>
-            <th>Post_ID</th>
-            <th>Check</th>
-            <th>Title</th>
-            <th>Like</th>
-          </tr>
-          <tbody>
-<?php
-  class topicData {
-    
-  }
-  for($i = 0; $i < 13; $i++) {
-?>
-            <tr>
-              <th class="has-text-centered"><?php echo $i; ?></th>
-              <td class="has-text-centered"><input type="checkbox"></td>
-              <td><a>Topic title, topic title, topoic title.</a></td>
-              <td>10</td>
-            </tr>
-<?php
-  }
-?>
-          </tbody>
-        </thead>
-      </table>
     </div>
   </main>
 

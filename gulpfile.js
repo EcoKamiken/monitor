@@ -28,9 +28,9 @@ gulp.task('server', function() {
             target: "localhost:10000"
         },
         files: [
-            "public/*",
-            "public/js/*",
-            "public/css/*",
+            "public/**/*.php",
+            "public/js/*.js",
+            "public/css/*.css",
         ]
     });
 });

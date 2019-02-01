@@ -26,7 +26,7 @@
     <div id="navbarBasic" class="navbar-menu">
       <div class="navbar-start">
 
-        <a class="navbar-item">
+        <a class="navbar-item" href="/">
           <span class="icon has-text-primary">
             <i class="fas fa-home"></i>
           </span>

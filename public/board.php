@@ -8,6 +8,15 @@
         </button>
       </div>
 
+      <section class="section">
+        <h2>Post</h2>
+        <form action="" method="post">
+          Title: <input type="text" name="title" value=""><br>
+          Body: <input type="text" name="body" value=""><br>
+          <button type="submit">Post</button>
+        </form>
+      </section>
+
       <div class="field">
         <label class="label"></label>
         <div class="control">
@@ -15,21 +24,26 @@
         </div>
       </div>
 
-      <table id="topicTable" class="table">
+      <table id="topicTable" class="table is-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Post_ID</th>
             <th>Check</th>
-            <th>Headding</th>
+            <th>Title</th>
+            <th>Like</th>
           </tr>
           <tbody>
 <?php
-  for($i = 0; $i < 10; $i++) {
+  class topicData {
+    
+  }
+  for($i = 0; $i < 13; $i++) {
 ?>
             <tr>
-              <th><?php echo $i; ?></th>
-              <td><input type="checkbox"></td>
-              <td><a>https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA</a></td>
+              <th class="has-text-centered"><?php echo $i; ?></th>
+              <td class="has-text-centered"><input type="checkbox"></td>
+              <td><a>Topic title, topic title, topoic title.</a></td>
+              <td>10</td>
             </tr>
 <?php
   }

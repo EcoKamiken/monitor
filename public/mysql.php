@@ -1,23 +1,10 @@
 <?php
-
-abstract class PDORepository {
-    const USERNAME = 'root';
-    const PASSWORD = 'kamiken5454mariadb';
-    const HOST = '192.168.11.107';
-    const PORT = '3307';
-    const DB = 'observer';
-    const CHARSET = 'utf8mb4';
-
-    private function getConnection() {
-        $username = self::USERNAME;
-        $password = self::PASSWORD;
-        $host = self::HOST;
-        $port = self::PORT;
-        $db = self::DB;
-        return new PDO("mysql:dbname=$db;host=$host:$port", $username, $password);
-    }
-}
-
+$host = '192.168.11.107';
+$port = '3307';
+$db = 'observer';
+$user = 'root';
+$pass = 'kamiken5454mariadb';
+$charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host:$port;dbname=$db;charset=$charset";
 $options = [

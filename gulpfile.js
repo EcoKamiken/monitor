@@ -5,7 +5,7 @@ const browserSync = require('browser-sync');
 const babel = require('gulp-babel');
 
 gulp.task('sass', function() {
-    return gulp.src('resources/sass/main.scss')
+    return gulp.src('resources/sass/*.scss')
     .pipe(sass({style: 'expanded'}))
         .on('error', gutil.log)
     .pipe(gulp.dest('public/css'))
@@ -18,7 +18,7 @@ gulp.task('babel', function() {
 })
 
 gulp.task('watch', function() {
-    gulp.watch('resources/sass/main.scss', gulp.series('sass'));
+    gulp.watch('resources/sass/*.scss', gulp.series('sass'));
     gulp.watch('resources/js/index.js', gulp.series('babel'));
 });
 

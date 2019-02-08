@@ -1,7 +1,7 @@
   <footer class="footer">
     <div class="has-text-centered">
       <p>
-        <strong>Kamiken Portal</strong> by <a>Kazuki Nakajima</a>.
+        <strong>Portal</strong> by <a>Kazuki Nakajima</a>.
       </p>
       <p>
           &copy; KAMISATO KENSETSU, Inc. 2019

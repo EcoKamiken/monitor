@@ -13,7 +13,7 @@
   <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <h1>Kamiken Portal</h1>
+        <h1>Portal</h1>
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
@@ -69,7 +69,7 @@
             <a class="button is-primary">
               <strong>Sign up</strong>
             </a>
-            <a class="button is-light">
+            <a class="button is-light" href="/login.php">
               Login
             </a>
           </div>

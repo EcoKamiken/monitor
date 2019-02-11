@@ -106,7 +106,7 @@ eval("\n\nvar _index = _interopRequireDefault(__webpack_require__(/*! ./index.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar c3 = __webpack_require__(/*! c3 */ \"./node_modules/c3/c3.js\");\n\nvar chart = c3.generate({\n  bindto: '#chart',\n  data: {\n    columns: [['data', 30, 20, 100, 300, 140, 240], ['data2', 30, 48, 29, 39, 10, 29], ['data3', 20, 29, 19, 20, 20]]\n  }\n});\n\n//# sourceURL=webpack:///./dist/graph.js?");
+eval("\n\nvar c3 = __webpack_require__(/*! c3 */ \"./node_modules/c3/c3.js\");\n\nvar chart = c3.generate({\n  bindto: '#chart-0',\n  data: {\n    columns: [['data', 30, 20, 100, 300, 140, 240], ['data2', 30, 48, 29, 39, 10, 29], ['data3', 20, 29, 19, 20, 20]],\n    axes: {\n      data2: 'y2'\n    },\n    type: 'pie'\n  }\n});\nvar chart2 = c3.generate({\n  bindto: '#chart-1',\n  data: {\n    columns: [['data', 30, 20, 100, 300, 140, 240], ['data2', 30, 48, 29, 39, 10, 29], ['data3', 20, 29, 19, 20, 20]],\n    axes: {\n      data2: 'y2'\n    },\n    type: 'pie'\n  }\n});\n\n//# sourceURL=webpack:///./dist/graph.js?");
 
 /***/ }),
 

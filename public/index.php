@@ -17,7 +17,19 @@ try {
 ?>
 
 <div class="container">
-  <div id="chart"></div>
+  <div class="tile is-ancestor">
+    <div class="tile is-vertical">
+      <div class="tile is-parent is-vertical">
+<?php
+  for($i = 0; $i < 10; $i++) {
+    echo "<article class='tile is-child'>";
+    echo "<div id='chart-$i'></div>";
+    echo "</article>";
+  }
+?>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php include 'templates/footer.php'; ?>

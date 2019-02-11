@@ -1,5 +1,9 @@
 @import "node_modules/bulma/bulma.sass";
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .mt {
     margin-top: 16px;
 }

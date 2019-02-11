@@ -12,14 +12,14 @@ gulp.task('sass', function() {
 });
 
 gulp.task('babel', function() {
-    return gulp.src('./resources/js/index.js')
+    return gulp.src('./resources/js/*.js')
     .pipe(babel())
     .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('watch', function() {
     gulp.watch('resources/sass/*.scss', gulp.series('sass'));
-    gulp.watch('resources/js/index.js', gulp.series('babel'));
+    gulp.watch('resources/js/*.js', gulp.series('babel'));
 });
 
 gulp.task('server', function() {

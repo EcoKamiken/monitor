@@ -16,4 +16,8 @@ try {
 
 ?>
 
+<div class="container">
+  <div id="chart"></div>
+</div>
+
 <?php include 'templates/footer.php'; ?>
